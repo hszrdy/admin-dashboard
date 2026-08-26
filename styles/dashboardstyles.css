@@ -1,11 +1,15 @@
 html, body {
     margin: auto;
     height: auto;
-    background-color:brown;
+}
+
+* {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
 }
 
 aside {
-    background-color: #428a91;
+    background-color: #2d2d30;
     color: #f0f1c7;
     display: flex;
     flex-direction: column;
@@ -20,7 +24,6 @@ aside > :first-child {
 }
 
 aside a {
-    color: #f0f1c7;
     text-decoration: none;
 }
 
@@ -34,7 +37,8 @@ header {
     flex-direction: column;
     width: 100%;
     height: auto;
-    background-color: #f0f1c7;
+    background-color:#1e1e1e;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 main {
@@ -42,7 +46,7 @@ main {
     width: 100vw;
 
     flex-direction: column;
-    background-color:bisque;
+    background-color:#3e3e42;
 }
 
 .page-container {
@@ -58,6 +62,12 @@ main {
     border-radius: 50%;
 }
 
+.banner-pfp {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
 .top-nav {
     display: flex;
     flex-direction: row;
@@ -69,13 +79,15 @@ main {
 .icon-link {
     width: clamp(0.5rem, 1.5vw, 1.8rem);
     height: clamp(0.5rem, 1.5vw, 1.8rem);
-    /* Filter color from generator @ https://codepen.io/sosuke/pen/Pjoqqp*/
-    filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(2092%) hue-rotate(9deg) brightness(100%) contrast(93%);
+    /* Filter color from generator @ https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(57%) sepia(27%) saturate(901%) hue-rotate(316deg) brightness(103%) contrast(95%);
 }
 
 .black-icon {
-    width: clamp(2rem, 4vw, 4rem);
-    height: clamp(2rem, 4vw, 4rem);
+    width: 2rem;
+    height: 2rem;
+    /* Filter color from generator @ https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(57%) sepia(27%) saturate(901%) hue-rotate(316deg) brightness(103%) contrast(95%);
 }
 
 .logo {
@@ -86,22 +98,35 @@ main {
 .header-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .header-notifs {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-notifs span {
+    font-size: 1rem;
 }
 
 .searchbar {
-    flex-grow: 2;
+    width: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .searchbar input {
     width: 100%;
-    max-width: 35vw;
+    max-width: 100vw;
+    height: 3vh;
     padding: 0.5rem;
     border-radius: 50px;
     border: 1px solid #ccc;
@@ -112,15 +137,49 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .user-info {
     display: flex;
+    gap: 2rem;
 }
 
 .user-details {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.user-name {
+    font-size: clamp(0.5rem, 1.5vw, 1.8rem);
+}
+
+.user-greeting {
+    font-size: clamp(0.5rem, 1vw, 1.2rem);
+}
+
+.user-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.user-actions button {
+    border-radius:50px;
+    border: none;
+    width: 10vw;
+    height: 5vh;
+    background-color: #F88379;
+}
+
+.user-actions button:hover {
+    box-shadow: 0px 0px 3px 3px #ff4938;
 }
 
 .navbar ul{
