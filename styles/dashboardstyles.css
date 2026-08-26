@@ -222,6 +222,10 @@ main::-webkit-scrollbar {
 }
 
 .card-container {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
     display: flex;
     width: 100%;
     background-color: #2d2d30;
@@ -232,6 +236,8 @@ main::-webkit-scrollbar {
 }
 
 .card-stripe {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     width: 0.5vw;
     height: 100%;
     background-color: #F88379;
@@ -251,4 +257,30 @@ main::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.side-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.announcements-card {
+    background-color: #2d2d30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.trending-card {
+    background-color: #2d2d30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
 }
