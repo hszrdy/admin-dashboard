@@ -1,6 +1,7 @@
 html, body {
     margin: auto;
     height: auto;
+    background-color: #3e3e42;
 }
 
 * {
@@ -14,7 +15,6 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     width: 30vw;
     font-size: clamp(0.5rem, 1.5vw, 1.8rem);
 }
@@ -44,9 +44,15 @@ header {
 main {
     display: flex;
     width: 100vw;
-
+    overflow: auto;
     flex-direction: column;
     background-color:#3e3e42;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 .page-container {
@@ -179,7 +185,7 @@ main {
 }
 
 .user-actions button:hover {
-    box-shadow: 0px 0px 3px 3px #ff4938;
+    box-shadow: 0px 0px 6px 3px #ff4938;
 }
 
 .navbar ul{
@@ -200,8 +206,11 @@ main {
 
 .dashboard-area {
     display: flex;
+    height: 100dvh;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 2rem;
+    gap: 2rem;
 }
 
 .project-cards {
@@ -209,4 +218,35 @@ main {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     gap: 2rem;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    background-color: #2d2d30;
+}
+
+.card-container:hover {
+    box-shadow: 0px 0px 10px 3px #F88379;
+}
+
+.card-stripe {
+    width: 0.5vw;
+    height: 100%;
+    background-color: #F88379;
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
