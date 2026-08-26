@@ -55,6 +55,12 @@ main::-webkit-scrollbar {
     display: none;
 }
 
+hr {
+    width: 100%;
+    background-color: #F88379;
+    border: 1px solid #F88379;
+}
+
 .page-container {
     display: flex;
     flex-direction: row;
@@ -71,6 +77,12 @@ main::-webkit-scrollbar {
 .banner-pfp {
     width: 5rem;
     height: 5rem;
+    border-radius: 50%;
+}
+
+.trending-pfp {
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
 }
 
@@ -262,6 +274,7 @@ main::-webkit-scrollbar {
 .side-grid {
     display: flex;
     flex-direction: column;
+    width: 20%;
     gap: 1vh;
 }
 
@@ -282,5 +295,45 @@ main::-webkit-scrollbar {
     justify-content: space-evenly;
     width: 100%;
     padding: 1rem;
+    gap: 1vh;
     border-radius: 12px;
+}
+
+.trending-slot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.handles {
+    display: flex;
+    flex-direction: column;
+}
+
+.handles > :nth-child(2) {
+    color:#ccc;
+    font-style: italic;
+}
+
+.announcements-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.announcements-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+}
+
+.announcements-slot > :first-child {
+    font-weight: bold;
+}
+
+.announcements-slot > :nth-child(2) {
+    color:#ccc;
 }
