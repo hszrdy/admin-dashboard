@@ -193,6 +193,11 @@ main {
     list-style-type: none;
 }
 
+.navbar li a:hover {
+    text-decoration: none;
+    color: #f8c8c8;
+}
+
 .dashboard-area {
     display: flex;
     flex-direction: row;
